@@ -7,5 +7,5 @@ import { faker } from "@faker-js/faker";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'typing';
+  randomText = faker.lorem.lines(1);
 }
