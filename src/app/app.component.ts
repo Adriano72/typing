@@ -8,4 +8,11 @@ import { faker } from "@faker-js/faker";
 })
 export class AppComponent {
   randomText = faker.lorem.lines(1);
+  enteredText = '';
+
+  onInput(value: string) {
+    console.log("Input text: "+value);
+    this.enteredText = value;
+
+  }
 }
