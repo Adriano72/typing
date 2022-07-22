@@ -3,7 +3,9 @@
     <div class="box column is-one-third">
       <h1 class="title has-text-centered">Typing Challenge</h1>
 
-      <p class="has-text-centered"><span *ngFor="let letter of randomText.split(''); let i = index;">
+      <p class="has-text-centered">
+        <span [class]="compare(letter, enteredText[i])" 
+        *ngFor="let letter of randomText.split(''); let i = index;">
           <span style="color:#538b01;" *ngIf="i <= enteredText.length -1 && enteredText[i] === letter;">{{letter}}</span>
           <span style="color:#f70025;" *ngIf="i <= enteredText.length -1 && enteredText[i] !== letter;">{{letter}}</span>          
           <span style="color:#080808;" *ngIf="i > enteredText.length -1">{{letter}}</span>
